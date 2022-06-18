@@ -1,5 +1,5 @@
 # .length로 자바스크립트 배열이 비어 있는지 확인하는 방법
-#### Madison Kanna (매디슨 칸나 저) | translated by Bo Yeon Ihn (인보연 역)
+#### 매디슨 칸나 저 (Madison Kanna) | 인보연 역 (Bo Yeon Ihn)
 
 ![scene of a concrete road](https://www.freecodecamp.org/news/content/images/size/w2000/2020/09/road-690087_1920.jpg)
 
