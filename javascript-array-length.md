@@ -20,7 +20,7 @@ const myArray = ['Horses', 'Dogs', 'Cats'];
 
 우선 배열이 담겨 있는 myArray 변수를 생성합니다.   
 
-length 속성을 사용하여 주어진 myArray 배열의 길이를 확인할 수 있습니다:   
+length 속성을 사용해 주어진 myArray 배열의 길이를 확인할 수 있습니다:   
 
 ```
 myArray.length
@@ -28,7 +28,7 @@ myArray.length
    
 배열에 3개의 요소가 있으므로 3을 반환합니다.     
 
-.length를 사용하여 배열이 비어 있는지 확인하려면 세 가지 방법이 있습니다.     
+.length를 사용해 배열이 비어 있는지 확인하려면 세 가지 방법이 있습니다.     
 
 
 
@@ -36,7 +36,7 @@ myArray.length
 먼저 요소가 없는 새 배열을 만듭니다.   
 
 `const arr = []`
-이제 .length 속성을 사용하여 배열이 비어 있는지 확인할 수 있습니다.   
+이제 .length 속성을 사용해 배열이 비어 있는지 확인할 수 있습니다.   
 
 `arr.length`
 배열에 0개의 요소가 있으므로 .length 속성은 0을 반환합니다.    
@@ -49,10 +49,10 @@ myArray.length
 
 배열이 비어 있으면 위의 메세지가 출력됩니다. 배열에 요소가 있으면 `if`문의 코드 블록은 실행되지 않습니다.   
 
-다음은 .length를 사용하여 배열이 비어 있는지를 확인하는 세번째 방법입니다.   
+다음은 .length를 사용해 배열이 비어 있는지를 확인하는 세번째 방법입니다.   
 
 ### .length 세번째 예시 
-.length 속성과 JavaScript의 논리 연산자 NOT의 의미가 담긴 `!` 느낌표를 함께 사용하여 배열이 비어 있는지를 확인할 수 있습니다.   
+.length 속성과 JavaScript의 논리 연산자 NOT의 의미가 담긴 `!` 느낌표를 함께 사용해 배열이 비어 있는지를 확인할 수 있습니다.   
 
 `!` 연산자는 주어진 표현식을 부정합니다. 즉, 이 `!` 연산자는 배열이 비어 있으면 `true`를 반환하는 데 사용할 수 있습니다.   
 
@@ -62,13 +62,13 @@ myArray.length
 
 ![arr 변수를 생성한 걸 보여주는 스크린샷](https://www.freecodecamp.org/news/content/images/2020/10/image.png)
 
-다음, 논리 연산자 `NOT` 을 .length 속성과 함께 사용하여 배열이 비어 있는지 여부를 확인해보겠습니다.    
+다음, 논리 연산자 `NOT` 을 .length 속성과 함께 사용해 배열이 비어 있는지 여부를 확인해보겠습니다.    
 
 ![연산자 NOT를 이용해 배열 길이를 확인하는 스크린샷](https://www.freecodecamp.org/news/content/images/2020/10/Screen-Shot-2020-09-30-at-5.29.35-PM.png)
 
 `NOT` 연산자를 사용하지 않았다면 `arr.length`는 `0`을 반환했을 것입니다. 연산자가 추가되었기 때문에, 피연산자가 `false`이면 `arr.length`는 `true`를 반환합니다. `arr.length`는 `0` 또는 false이므로 `true`를 반환합니다.   
 
-이제 `!` 연산자를 `if`문과 함께 사용하여, 배열이 비어 있으면 메세지를 출력해보겠습니다.   
+이제 `!` 연산자를 `if`문과 함께 사용하고, 배열이 비어 있으면 메세지를 출력해보겠습니다.   
 
 ![연산자 NOT와 if문을 사용해 배열 길이를 확인하는 코드 스크린샷](https://www.freecodecamp.org/news/content/images/2020/10/image-2.png)
 
@@ -90,8 +90,8 @@ myArray.length
 
 
 ## 마무리   
-본 아티클에서는 JavaScript의 `length` 속성을 다양한 방법으로 사용하여 주어진 배열이 비어 있는지 여부를 확인할 수 있음을 배웠습니다. `length` 속성은 배열의 요소 수를 반환합니다.   
+본 아티클에서는 JavaScript의 `length` 속성을 다양한 방법으로 사용해 주어진 배열이 비어 있는지 여부를 확인할 수 있음을 배웠습니다. `length` 속성은 배열의 요소 수를 반환합니다.   
 
-또한 `.length` 속성을 사용할 때 `Array.isArray` 메서드를 함께 사용하여 전달된 값이 예상대로 배열이 맞는지 확인하는 것이 가장 좋다는 것도 배웠습니다. 
+또한 `.length` 속성을 사용할 때 `Array.isArray` 메서드를 함께 사용해 전달된 값이 예상대로 배열이 맞는지 확인하는 것이 가장 좋다는 것도 배웠습니다. 
 
 영어 원문을 읽고 싶으시다면 [How to Check if a JavaScript Array is Empty or Not with .length](https://www.freecodecamp.org/news/check-if-javascript-array-is-empty-or-not-with-length/) 를 읽어보세요. 
