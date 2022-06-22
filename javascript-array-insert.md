@@ -3,8 +3,8 @@
 
 ![자바스크립트 요소 추가 메서드들 - Push, Unshift, Concat](https://www.freecodecamp.org/news/content/images/size/w2000/2020/08/Hello--my-name-is-Matthew.-Nice-to-meet-you..png)
 
-영어 원문: [JavaScript Array Insert - How to Add to an Array with the Push, Unshift, and Concat Functions](https://www.freecodecamp.org/news/javascript-array-insert-how-to-add-to-an-array-with-the-push-unshift-and-concat-functions/)
-글쓴이: [Nehemiah Kivelevitz](https://www.freecodecamp.org/news/author/nehemiah/)
+영어 원문: [JavaScript Array Insert - How to Add to an Array with the Push, Unshift, and Concat Functions](https://www.freecodecamp.org/news/javascript-array-insert-how-to-add-to-an-array-with-the-push-unshift-and-concat-functions/)   
+원문 글쓴이: [Nehemiah Kivelevitz](https://www.freecodecamp.org/news/author/nehemiah/)
 
 
 JavaScript 배열은 제가 가장 좋아하는 데이터 유형 중 하나입니다. 동적이고 사용하기 쉬우며, 프로그래머가 활용할 수 있는 다양한 내장 메서드들을 제공합니다.
