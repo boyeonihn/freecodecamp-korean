@@ -4,7 +4,8 @@
 
 ![scene of a concrete road](https://www.freecodecamp.org/news/content/images/size/w2000/2020/09/road-690087_1920.jpg)
 
-영어 원문 - Madison Kanna의 [How to Check if a JavaScript Array is Empty or Not with .length](https://www.freecodecamp.org/news/check-if-javascript-array-is-empty-or-not-with-length/)
+영어 원문: [How to Check if a JavaScript Array is Empty or Not with .length](https://www.freecodecamp.org/news/check-if-javascript-array-is-empty-or-not-with-length/)
+글쓴이: [Madison Kanna](https://www.freecodecamp.org/news/author/madisonkanna/)
 
 # JavaScript 프로그래밍할 때, 주어진 배열이 비어 있는지 확인하는 방법을 알아야 할 수도 있습니다.
 주어진 배열이 비어 있는지 알려면 배열의 .length 속성을 사용할 수 있습니다.   
