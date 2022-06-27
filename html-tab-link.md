@@ -65,7 +65,7 @@
 출력되는 결과물은 다음과 같습니다: 
 
 <p align="center">
-    Check out <a href="https://www.freecodecamp.org/" target="_blank" rel="noopener noreferrer">freeCodeCamp</a>..
+    Check out <a href="https://www.freecodecamp.org/" target="_blank" rel="noopener noreferrer">freeCodeCamp</a>.
 </p>
 
 
@@ -100,7 +100,7 @@ HTML을 사용해 새 탭에서 링크를 여는 것은 매우 쉽습니다. 다
 그 결과 브라우저에 다음과 같은 출력이 표시됩니다: 
 
 <p align="center">
-    Check out <a href="https://www.freecodecamp.org/" target="_blank" rel="noopener noreferrer">freeCodeCamp</a>..
+    Check out <a href="https://www.freecodecamp.org/" target="_blank" rel="noopener noreferrer">freeCodeCamp</a>.
 </p>
 
 이 기사를 읽어주셔서 감사합니다. 즐겁게 코딩하시길 바랍니다.
