@@ -65,7 +65,7 @@
 
 
 
-`rel` 속성은 현 페이지와 링크된 URL 사이의 관계를 설정합니다. 이를 `noopener no refererer`로 설정하면 [탭내빙](https://en.wikipedia.org/wiki/Tabnabbing)으로 알려진 피싱 공격을 막을 수 있습니다.   
+`rel` 속성은 현 페이지와 링크된 URL 사이의 관계를 설정합니다. 이를 `noopener norefererer`로 설정하면 [탭내빙](https://en.wikipedia.org/wiki/Tabnabbing)으로 알려진 피싱 공격을 막을 수 있습니다.   
 
 
 ## 탭내빙(tabnabbing)은 무엇인가요? 
