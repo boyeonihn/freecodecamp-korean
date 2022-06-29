@@ -12,7 +12,7 @@
 터미널에서 텍스트 편집기를 열면 빠르고 쉽게 새 프로젝트를 열고 코딩을 시작할 수 있습니다.    
 
 ## VS Code를 다운로드하고 여는 방법
-먼저 VS Code를 엽니다. VS Code가 아직 없으면 [여기](https://code.visualstudio.com/)에서 다운로드할 수 있습니다. VS Code는 Microsoft에서 만든 인기 있는 텍스트 편집기 프로그램입니다.
+먼저 VS Code를 엽니다. VS Code가 아직 없으면 [여기](https://code.visualstudio.com/)에서 다운로드할 수 있습니다. VS Code는 Microsoft에서 만든 인기 텍스트 편집기 프로그램입니다.
 
 VS Code가 열리면, 다음과 같은 화면이 보입니다:
 
