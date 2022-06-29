@@ -20,7 +20,7 @@ VS Code가 열리면, 다음과 같은 화면이 보입니다:
 
 그런 다음, `Command + Shift + P`를 입력합니다.    
 
-이제 다음 화면이 보입니다:    
+이제 다음과 같은 화면이 보입니다:    
 
 ![명령 팔레트가 열린 VS Code 프로그램 창](https://www.freecodecamp.org/news/content/images/size/w1000/2022/01/image-1.png)
 
