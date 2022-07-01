@@ -193,29 +193,48 @@ reverseString("hello");
 <p>
     <a href="https://www.freecodecamp.org/news/three-ways-to-repeat-a-string-in-javascript-2a9053b93a2d/">
     <strong>JavaScript에서 문자열을 반복하는 세 가지 방법 [영문]</strong> </br>
-    이 기사에서는 freeCodeCamp의 "문자열 반복 반복" 문제를 해결하는 방법을 설명합니다. 여기에는…
+    이 기사에서는 freeCodeCamp의 "Repeat a string repeat a string" 알고리즘 문제를 해결하는 방법을 설명합니다. 여기에는…
     </a>
 </p>
 
+<p>
+    <a href="https://www.freecodecamp.org/news/two-ways-to-confirm-the-ending-of-a-string-in-javascript-62b4677034ac/">
+    <strong>JavaScript에서 문자열의 끝을 확인하는 두 가지 방법 [영문]</strong> </br>
+    이 기사에서는 freeCodeCamp의 "Confirm Ending" 알고리즘 문제를 해결하는 방법을 설명합니다.
+    </a>
+</p>
 
-JavaScript에서 String의 끝을 확인하는 두 가지 방법
-이 기사에서는 freeCodeCamp의 "Confirm Ending" 문제를 해결하는 방법을 설명합니다.
+<p>
+    <a href="https://www.freecodecamp.org/news/how-to-factorialize-a-number-in-javascript-9263c89a4b38/">
+    <strong>JavaScript에서 숫자를 인수분해하는 세 가지 방법 [영문]</strong> </br>
+    이 기사는 freeCodeCamp의 기본 알고리즘 작성법 "숫자 인수분해"튜토리얼을 기반으로 합니다. 
+    </a>
+</p>
 
-JavaScript에서 숫자를 인수분해하는 세 가지 방법
-이 기사는 Free Code Camp 기본 알고리즘 스크립팅 "숫자 인수분해"를 기반으로 합니다
+<p>
+    <a href="https://www.freecodecamp.org/news/two-ways-to-check-for-palindromes-in-javascript-64fea8191fd7/">
+    <strong>JavaScript에서 회문(팰린드롬)을 확인하는 두 가지 방법 [영문]</strong> </br>
+    이 기사는 freeCodeCamp의 기본 알고리즘 작성법의 "회문 확인" 튜토리얼을 기반으로 합니다.
+    </a>
+</p>
 
-JavaScript에서 회문을 확인하는 두 가지 방법
-이 기사는 Free Code Camp 기본 알고리즘 스크립팅 "회문 확인"을 기반으로 합니다.
+<p>
+    <a href="https://www.freecodecamp.org/news/three-ways-to-find-the-longest-word-in-a-string-in-javascript-a2fb04c9757c/">
+    <strong>JavaScript에서 문자열에서 가장 긴 단어를 찾는 세 가지 방법 [영문]</strong> </br>
+    이 기사는 freeCodeCamp의 기본 알고리즘 작성법의 "회문 확인" 튜토리얼을 기반으로 합니다.
+    </a>
+</p>
 
-JavaScript에서 문자열에서 가장 긴 단어를 찾는 세 가지 방법
-이 기사는 Free Code Camp 기본 알고리즘 스크립팅 "문자열에서 가장 긴 단어 찾기"를 기반으로 합니다.
+<p>
+    <a href="https://www.freecodecamp.org/news/three-ways-to-title-case-a-sentence-in-javascript-676a9175eb27/">
+    <strong>JavaScript에서 문장을 타이틀 케이스(대문자화)하는 세 가지 방법 [영문]</strong> </br>
+    이 기사는 freeCodeCamp의 기본 알고리즘 작성법의 "Title Case a Sentence" 튜토리얼을 기반으로 합니다.
+    </a>
+</p>
 
-JavaScript에서 문장의 제목을 지정하는 세 가지 방법
-이 기사는 Free Code Camp 기본 알고리즘 스크립팅 "Title Case a Sentence"를 기반으로 합니다.
+독자분들만의 솔루션이나 제안 사항이 있으면 아래 댓글란에 공유해주세요. 
 
-자신의 솔루션이나 제안 사항이 있으면 아래 의견에 공유하십시오.
-
-또는 아래 녹색 하트를 클릭한 직후 Medium , Twitter , Github 및 LinkedIn 에서 저를 팔로우할 수 있습니다. ;-)
+[Medium](https://medium.com/@sonya.moisset), [Twitter](https://twitter.com/SonyaMoisset), [Github](https://github.com/SonyaMoisset) 또는 [LinkedIn](https://www.linkedin.com/in/sonyamoisset/) 에서 저를 팔로우할 수 있습니다. ;-)
 
 #StayCurious, #KeepOnHacking & #MakeItHappen!
 
