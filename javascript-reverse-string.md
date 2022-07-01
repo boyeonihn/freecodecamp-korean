@@ -1,20 +1,34 @@
-# Push, Unshift 및 Concat 메서드를 사용해 JavaScript 배열에 요소를 추가하는 방법
+# JavaScript에서 문자열을 뒤집는 세 가지 방법
 #### 인보연 (Bo Yeon Ihn) 번역
 
-![자바스크립트 요소 추가 메서드들 - Push, Unshift, Concat](https://www.freecodecamp.org/news/content/images/size/w2000/2020/08/Hello--my-name-is-Matthew.-Nice-to-meet-you..png)
+![아치형 건축물을 아래에서 위를 바라본 채 찍은 사진](https://cdn-media-1.freecodecamp.org/images/1*aFrHLdCeSRv4z-hsfCA6hw.jpeg)
 
-영어 원문: [JavaScript Array Insert - How to Add to an Array with the Push, Unshift, and Concat Functions](https://www.freecodecamp.org/news/javascript-array-insert-how-to-add-to-an-array-with-the-push-unshift-and-concat-functions/)   
-원문 글쓴이: [Nehemiah Kivelevitz](https://www.freecodecamp.org/news/author/nehemiah/)
-
-
-JavaScript 배열은 제가 가장 좋아하는 데이터 유형 중 하나입니다. 동적이고 사용하기 쉬우며, 프로그래머가 활용할 수 있는 다양한 내장 메서드들을 제공합니다.
-
-그러나 옵션이 많을수록 어떤 메서드를 사용해야 할지 결정하는 것이 더 혼란스러울 수 있습니다.
-
-이 기사에서는 JavaScript 배열에 요소를 추가하는 몇 가지 일반적인 방법에 관해 설명하려고 합니다.
+영어 원문: [Three Ways to Reverse a String in JavaScript](https://www.freecodecamp.org/news/how-to-reverse-a-string-in-javascript-in-3-different-ways-75e4763c68cb/)   
+원문 글쓴이: [Sonya Moisset](https://www.freecodecamp.org/news/author/sonya/)
 
 
-## Push 메서드
+### 이 기사는 freeCodeCamp의 기본 알고리즘 작성법 - [문자열 반전 튜토리얼](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-algorithm-scripting/reverse-a-string)을 기반으로 합니다. 
+
+문자열 반전하기는 기술 인터뷰에서 가장 자주 묻는 JavaScript 질문 중 하나입니다. 인터뷰 진행자는 문자열을 뒤집는 여러 방법을 작성하도록 요청하거나, 내정된 메서드를 사용하지 않고 문자열을 반전하도록 요청하거나, 또는 재귀를 사용해 문자열을 반전하도록 요청할 수 있습니다.    
+
+JavaScript에는 문자열을 뒤집는 내장 메서드는 없지만, 그것을 제외해도 다양한 다른 방법이 있습니다.   
+
+다음은 JavaScript에서 문자열을 반전시킬 수 있는 가장 흥미로운 세 가지 방법입니다.
+
+## 알고리즘 문제
+<blockquote>
+    <p>제공된 문자열을 반대로 바꿉니다.</p>
+    <p>문자열을 반전시키기 전에 문자열을 배열로 변환해야 할 수도 있습니다.</p>
+    <p>반환되는 결과가 문자열이어야 합니다.</p>
+</blockquote>
+
+```javascript
+function reverseString(str) {
+    return str;
+}
+reverseString("hello");
+```
+
 
 첫 번째는, 가장 일반적으로 접할 수 있는 JavaScript 배열 메서드인 `push()`입니다. `push()` 메서드는 배열 끝에 요소를 추가하는 데 사용합니다. 
 
@@ -23,7 +37,7 @@ JavaScript 배열은 제가 가장 좋아하는 데이터 유형 중 하나입�
 코드 형식의 예를 살펴보겠습니다:
 
 
-```javascript
+```
 const arr = ['첫 번째 항목', '두 번째 항목', '세 번째 항목'];
 
 arr.push('네 번째 항목');
@@ -36,7 +50,7 @@ console.log(arr); // ['첫 번째 항목', '두 번째 항목', '세 번째 항�
 
 한 번에 두세 개의 요소를 배열에 추가하고 싶다면, 어떻게 해야 할까요? 동일한 `push` 메서드로 여러 개의 요소를 추가할 수 있습니다.
 
-```javascript
+```
 const arr = ['첫 번째 항목', '두 번째 항목', '세 번째 항목'];
 
 arr.push('네 번째 항목', '다섯 번째 항목');
@@ -50,7 +64,7 @@ console.log(arr); // ['첫 번째 항목', '두 번째 항목', '세 번째 항�
 다행히도, `push()`는 요소가 추가된 후의 배열의 길이를 반환 값으로 가지고 있습니다.
 
 
-```javascript
+```
 const arr = ['첫 번째 항목', '두 번째 항목', '세 번째 항목'];
 
 const arrLength = arr.push('네 번째 항목', '다섯 번째 항목');
@@ -66,7 +80,7 @@ console.log(arr); // ['첫 번째 항목', '두 번째 항목', '세 번째 항�
 이때 배열의 맨 처음에 항목을 추가할 수 있는 `unshift()` 메서드를 소개합니다.
 
 
-```javascript
+```
 const arr = ['첫 번째 항목', '두 번째 항목', '세 번째 항목'];
 
 const arrLength = arr.unshift('급한 항목 1', '급한 항목 2');
@@ -89,7 +103,7 @@ console.log(arr); // ['급한 항목 1', '급한 항목 2', '첫 번째 항목',
 
 다음은 상당히 기본적이고 간단한 활용 사례입니다:
 
-```javascript
+```
 const arr1 = ['?', '?'];
 const arr2 = ['?', '?'];
 
@@ -102,7 +116,7 @@ console.log(arr3); // ["?", "?", "?", "?"]
 
 이제 두 개 이상의 배열을 결합하고 싶다고 가정해 보겠습니다. 이럴 때도 `concat()` 메서드를 사용할 수 있습니다.
 
-```javascript
+```
 const arr1 = ['?', '?'];
 const arr2 = ['?', '?'];
 const arr3 = ['?', '?'];
@@ -119,7 +133,7 @@ console.log(arr4); // ["?", "?", "?", "?", "?", "?"]
 
 
 
-```javascript
+```
 const arr1 = ["a", "b", "c", "d", "e", "f"];
 
 const arr2 = [].concat(arr1);
@@ -138,7 +152,7 @@ console.log(arr2) //["a", "b", "c", "d", "e", "f", "g"]
 이 개념을 더 명확하게 설명하기 위해 예를 살펴봅시다.
 
 
-```javascript
+```
 const arr1 = [{food:"apple"}, {food:"banana"}, {food:"cranbery"}]
 
 const arr2 = [].concat(arr1);

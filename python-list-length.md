@@ -27,7 +27,7 @@ Python 리스트의 길이를 확인하려면 내장 함수 `len()` 을 사용�
 아래 예시는 나이브 메서드를 사용해 Python에서 리스트의 길이를 가져오는 방법을 보여줍니다. 
 
 
-```
+```python
 demoList = ["Python", 1, "JavaScript", True, "HTML", "CSS", 22]
 
 # 카운터 변수를 생성합니다 
@@ -54,7 +54,7 @@ print("나이브 메서드(naive method)를 사용해 구한 리스트 길이의
 아래 코드 블록은 `len()` 함수를 사용해 리스트의 길이를 가져오는 방법입니다:  
 
 
-```
+```python
 demoList = ["Python", 1, "JavaScript", True, "HTML", "CSS", 22]
 
 sizeOfDemoList = len(demoList)
@@ -76,7 +76,7 @@ print("출력된 값: len() 메서드를 사용해 구한 리스트 길이의 �
 
 아래 예시는 `length_hint()` 메서드를 사용해 리스트의 길이를 가져오는 방법입니다: 
 
-```
+```python
 from operator import length_hint
 
 demoList = ["Python", 1, "JavaScript", True, "HTML", "CSS", 22]
