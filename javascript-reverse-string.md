@@ -9,9 +9,9 @@
 
 ### 이 기사는 freeCodeCamp의 기본 알고리즘 작성법 - [문자열 반전 튜토리얼](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-algorithm-scripting/reverse-a-string)을 기반으로 합니다. 
 
-문자열 반전하기는 기술 인터뷰에서 가장 자주 묻는 JavaScript 질문 중 하나입니다. 인터뷰 진행자는 문자열을 뒤집는 여러 방법을 작성하도록 요청하거나, 내정된 메서드를 사용하지 않고 문자열을 반전하도록 요청하거나, 또는 재귀를 사용해 문자열을 반전하도록 요청할 수 있습니다.    
+문자열 반전하기는 기술 인터뷰에서 가장 자주 묻는 JavaScript 질문 중 하나입니다. 인터뷰 진행자는 문자열을 뒤집는 여러 방법을 작성하도록 요청하거나, 내정된 메서드를 사용하지 않고 문자열을 반전하도록 요청하거나, 또는 재귀(recursion)를 사용해 문자열을 반전하도록 요청할 수 있습니다.    
 
-JavaScript에는 문자열을 뒤집는 내장 메서드는 없지만, 그것을 제외해도 다양한 다른 방법이 있습니다.   
+JavaScript에는 문자열을 반전하는 내장 메서드는 없지만, 그것을 제외해도 다른 다양한 방법이 있습니다.   
 
 다음은 JavaScript에서 문자열을 반전시킬 수 있는 가장 흥미로운 세 가지 방법입니다.
 
@@ -29,154 +29,200 @@ function reverseString(str) {
 reverseString("hello");
 ```
 
+## 제공되는 테스트 케이스 
+- reverseString("hello") 은 "olleh"를 반환해야 합니다.
+- reverseString("Howdy") 은 "ydwoH"를 반환해야 합니다.
+- reverseString("Greetings from Earth") 은 "htraE morf sgniterG"를 반환해야 합니다.
 
-첫 번째는, 가장 일반적으로 접할 수 있는 JavaScript 배열 메서드인 `push()`입니다. `push()` 메서드는 배열 끝에 요소를 추가하는 데 사용합니다. 
+## 1. 내장 함수를 사용해 문자열 반전하기 
 
-요소가 담긴 배열이 있다고 가정해 보겠습니다. 각 요소는 수행해야 하는 작업을 나타내는 문자열입니다. 이때, 이전 작업을 먼저 완료할 수 있도록 배열의 끝에 새 항목을 추가하는 것이 좋습니다.
+이 솔루션에서는 `String.protype.split()`, `Array.protype.reverse()`, 그리고 `Array.protype.join()`의 총 세가지 메서드를 사용합니다:
 
-코드 형식의 예를 살펴보겠습니다:
-
-
-```
-const arr = ['첫 번째 항목', '두 번째 항목', '세 번째 항목'];
-
-arr.push('네 번째 항목');
-
-console.log(arr); // ['첫 번째 항목', '두 번째 항목', '세 번째 항목', '네 번째 항목']
-
-```
-
-이렇게 `push` 메서드는 배열의 끝에 요소를 추가해주는 간단하고 좋은 코딩 구문을 제공해줍니다. 
-
-한 번에 두세 개의 요소를 배열에 추가하고 싶다면, 어떻게 해야 할까요? 동일한 `push` 메서드로 여러 개의 요소를 추가할 수 있습니다.
-
-```
-const arr = ['첫 번째 항목', '두 번째 항목', '세 번째 항목'];
-
-arr.push('네 번째 항목', '다섯 번째 항목');
-
-console.log(arr); // ['첫 번째 항목', '두 번째 항목', '세 번째 항목', '네 번째 항목', '다섯 번째 항목']
-
-```
-
-배열에 몇 가지 항목을 추가했으니 현재 배열에 요소가 얼마나 있는지, 혹은 해야 할 작업이 너무 많은 건 아닌지 알고 싶을 수 있습니다. 
-
-다행히도, `push()`는 요소가 추가된 후의 배열의 길이를 반환 값으로 가지고 있습니다.
+- `split()` 메서드는 문자열을 부분 문자열(substring)로 구분해 문자열 객체를 여러 개의 문자열로 이루어진 배열로 분할합니다.
+- `reverse()` 메서드는 배열을 반전합니다. 첫 번째 배열 요소는 마지막 요소가 되고 마지막 요소는 첫 번째 요소가 됩니다.
+- `join()` 메서드는 배열의 모든 요소를 문자열로 결합합니다.
 
 
-```
-const arr = ['첫 번째 항목', '두 번째 항목', '세 번째 항목'];
-
-const arrLength = arr.push('네 번째 항목', '다섯 번째 항목');
-
-console.log(arrLength); // 5
-console.log(arr); // ['첫 번째 항목', '두 번째 항목', '세 번째 항목', '네 번째 항목', '다섯 번째 항목']
-```
-
-## Unshift 메서드
-
-모든 작업이 동일하게 생성되지는 않습니다. 배열에 작업 항목을 추가하다가 갑자기 다른 항목보다 더 급한 작업이 생길 수도 있습니다.
-
-이때 배열의 맨 처음에 항목을 추가할 수 있는 `unshift()` 메서드를 소개합니다.
-
-
-```
-const arr = ['첫 번째 항목', '두 번째 항목', '세 번째 항목'];
-
-const arrLength = arr.unshift('급한 항목 1', '급한 항목 2');
-
-console.log(arrLength); // 5 
-console.log(arr); // ['급한 항목 1', '급한 항목 2', '첫 번째 항목', '두 번째 항목', '세 번째 항목']
+```javascript
+function reverseString(str) {
+    // 1. split() 메서드를 사용해 새 배열을 반환하기
+    var splitString = str.split(""); // var splitString = "hello".split("");
+    // ["h", "e", "l", "l", "o"]
+ 
+    // 2. reverse() 메서드를 사용해 새 배열의 순서를 뒤집기
+    var reverseArray = splitString.reverse(); // var reverseArray = ["h", "e", "l", "l", "o"].reverse();
+    // ["o", "l", "l", "e", "h"]
+ 
+    // 3. join() 메서드를 사용해 배열의 모든 요소를 문자열로 결합하기
+    var joinArray = reverseArray.join(""); // var joinArray = ["o", "l", "l", "e", "h"].join("");
+    // "olleh"
+    
+    // 4. 반전된 문자열을 반환하기
+    return joinArray; // "olleh"
+}
+ 
+reverseString("hello");
 
 ```
 
+## 세 메서드를 한 줄에 작성하기 
 
-위의 예시를 보면, `unshift()` 메서드는 `push()` 메서드와 마찬가지로, 요소들이 추가된 새 배열의 길이를 반환한다는 것을 알 수 있습니다. 또한 한 번에 두 개 이상의 요소를 추가할 수 있습니다. 
-
-
-## Concat 메서드
-`concat()` 메서드는 '함께 연결하다'라는 뜻을 가진 'concatenate'의 줄임말로, 두 개 이상의 배열을 결합하는 데 사용합니다.
-
-위에서 말했듯이, `unshift()`와 `push()` 메서드는 새 배열의 길이를 반환합니다. 반면에 `concat()`은 완전히 새로운 배열을 반환합니다. 
-
-이것은 매우 중요한 차이점이며, 기존 배열을 변형하고 싶지 않을 경우(예: React state에 저장된 배열), `concat()`이 매우 유용합니다.
-
-다음은 상당히 기본적이고 간단한 활용 사례입니다:
-
-```
-const arr1 = ['?', '?'];
-const arr2 = ['?', '?'];
-
-const arr3 = arr1.concat(arr2);
-
-console.log(arr3); // ["?", "?", "?", "?"] 
-
+``` javascript
+function reverseString(str) {
+    return str.split("").reverse().join("");
+}
+reverseString("hello");
 ```
 
+## 2. 내림차순으로 반복하는 for문으로 문자열 반전하기
 
-이제 두 개 이상의 배열을 결합하고 싶다고 가정해 보겠습니다. 이럴 때도 `concat()` 메서드를 사용할 수 있습니다.
-
+```javascript
+function reverseString(str) {
+    // 1. 새로 생성될 문자열을 담을 빈 문자열을 만들기
+    var newString = "";
+ 
+    // 2. for문을 작성하기
+        /* 반복문의 시작점은 문자열의 마지막 문자 "o"의 인덱스인 (str.length - 1)입니다.
+        i가 0보다 크거나 같은 한 코드는 반복적으로 수행됩니다.
+        코드가 반복할 때마다 i의 값을 줄입니다 */
+    for (var i = str.length - 1; i >= 0; i--) { 
+        newString += str[i]; // 또는 newString = newString + str[i];
+    }
+    /* 코드의 이 단계에서는 hello의 길이는 5입니다
+        코드가 반복할 때마다: i = str.length - 1 그리고 newString = newString + str[i]
+        첫 번째 반복:    i = 5 - 1 = 4,         newString = "" + "o" = "o"
+        두 번째 반복:   i = 4 - 1 = 3,         newString = "o" + "l" = "ol"
+        세 번째 반복:    i = 3 - 1 = 2,         newString = "ol" + "l" = "oll"
+        네 번째 반복:   i = 2 - 1 = 1,         newString = "oll" + "e" = "olle"
+        다섯 번째 반복:    i = 1 - 1 = 0,         newString = "olle" + "h" = "olleh"
+    for 반복문이 끝납니다*/
+ 
+    // 3. 반전된 문자열을 반환하기
+    return newString; // "olleh"
+}
+ 
+reverseString('hello');
 ```
-const arr1 = ['?', '?'];
-const arr2 = ['?', '?'];
-const arr3 = ['?', '?'];
-
-const arr4 = arr1.concat(arr2,arr3);
-
-console.log(arr4); // ["?", "?", "?", "?", "?", "?"]
-```
-
-## concat를 사용해 기존 배열 복제하는 방법 
-
-기존 배열을 변형하고 싶지 않을 때 `concat()` 메서드가 유용할 수 있다고 말했던 것을 기억하십니까? 이 개념을 활용해서 한 배열의 내용을 새 배열로 복사하는 방법을 살펴보겠습니다.
-
-
-
-
-```
-const arr1 = ["a", "b", "c", "d", "e", "f"];
-
-const arr2 = [].concat(arr1);
-
-arr2.push("g");
-
-console.log(arr1) //["a", "b", "c", "d", "e", "f"]
-console.log(arr2) //["a", "b", "c", "d", "e", "f", "g"]
-```
-
-
-이렇게 `concat()`을 사용해서 배열을 본질적으로 "복제"할 수 있습니다. 
-
-그러나 이 복제 과정에는 작은 문제가 있습니다. 새 배열은 복사된 배열의 "얕은 복사본(shallow copy)"입니다. 즉, 복사 과정 중 객체 내 데이터 자체가 아닌 참조 값(reference)이 복사되어 전달됩니다. 
-
-이 개념을 더 명확하게 설명하기 위해 예를 살펴봅시다.
-
-
-```
-const arr1 = [{food:"apple"}, {food:"banana"}, {food:"cranbery"}]
-
-const arr2 = [].concat(arr1);
-
-//change only arr2
-arr2[1].food = "MELON";
-arr2.push({food:"strawberry"})
-
-console.log(arr1) //[ {food:'apple'}, {food:'MELON'}, {food:'cranbery'} ]
-
-console.log(arr2) //[ {food:'apple'}, {food:'MELON'}, {food:'cranbery'}, {food: 'strawberry'} ]
+## 주석을 생략한 코드 
+``` javascript
+function reverseString(str) {
+    var newString = "";
+    for (var i = str.length - 1; i >= 0; i--) {
+        newString += str[i];
+    }
+    return newString;
+}
+reverseString('hello');
 ```
 
-이 예를 통해 기존 배열을 직접 변경하지는 않았지만, 결국 기존 배열은 복제된 배열에서 변경한 사항의 영향을 받았다는 것을 알 수 있습니다.
+## 3. 재귀로 문자열 반전하기 
+이 솔루션에서는 `String.prototype.substring()`와 `String.prototype.charAt()`의 두 가지 메서드를 사용합니다:
 
-배열의 "깊은 복사(deep clone)"를 올바르게 수행하는 여러 가지 다른 방법이 있지만, 이것은 독자분들의 몫으로 남겨두겠습니다.
+# 감수자님을 위한 코멘트:: 2016년에 작성된 원문에서는 String.prototype.substr() 메서드였으나, [MDN](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/substr)을 확인해 본 결과 substr() "본 부록이 포함한 기능을 사용하거나 존재함을 가정해선 안됩니다" 라고 쓰여 있어서 대신 사용되고 있는 `substring()` 메서드를 표기했습니다. 
 
-## 글을 마치며 
+- `substring()` 메서드는 기존 문자열의 특정 시작 인덱스부터 끝 인덱스 범위 내에 위치한 문자를 부분 문자열로 반환합니다.
 
-배열 끝에 요소를 추가하려면 `push()`를 사용합니다. 배열 맨 앞에 요소를 추가해야 하는 경우에는 `unshift()`를 사용합니다. 그리고 `concat()`을 사용하여 배열을 결합할 수 있습니다.
+```javascript
+"hello".substr(1); // "ello"
+```
 
-이 세 가지 메서드 외에 배열에 요소를 추가할 수 있는 다양한 메서드들이 많이 있으니, 독자분들도 다른 다양한 배열 메서드들 한 번 찾아보시길 바랍니다!
+- `charAt()` 메서드는 문자열의 특정 인덱스에 위치하는 문자를 반환합니다.
 
-언제든지 트위터를 통해 제게 독자분이 좋아하는 배열 요소 추가 메서드를 알려주시길 바랍니다!
+```javascript
+"hello".charAt(0); // "h"
+```
+
+재귀 깊이는 문자열의 길이와 같습니다. 이 솔루션은 문자열이 매우 길고 스택 크기가 중요한 경우 실행 속도가 매우 느리기 때문에 가장 효율적인 문자열 반전 방법은 아닙니다.
+
+```javascript
+function reverseString(str) {
+  if (str === "") // This is the terminal case that will end the recursion
+    return "";
+  
+  else
+    return reverseString(str.substr(1)) + str.charAt(0);
+/* 
+재귀 메서드의 첫 번째 단계
+You need to remember that you won’t have just one call, you’ll have several nested calls
+
+Each call: str === "?"        	                  reverseString(str.subst(1))     + str.charAt(0)
+1st call – reverseString("Hello")   will return   reverseString("ello")           + "h"
+2nd call – reverseString("ello")    will return   reverseString("llo")            + "e"
+3rd call – reverseString("llo")     will return   reverseString("lo")             + "l"
+4th call – reverseString("lo")      will return   reverseString("o")              + "l"
+5th call – reverseString("o")       will return   reverseString("")               + "o"
+
+재귀 메서드의 두 번째 단계
+The method hits the if condition and the most highly nested call returns immediately
+
+5th call will return reverseString("") + "o" = "o"
+4th call will return reverseString("o") + "l" = "o" + "l"
+3rd call will return reverseString("lo") + "l" = "o" + "l" + "l"
+2nd call will return reverserString("llo") + "e" = "o" + "l" + "l" + "e"
+1st call will return reverserString("ello") + "h" = "o" + "l" + "l" + "e" + "h" 
+*/
+}
+reverseString("hello");
+```
 
 
-영어 원문을 읽고 싶으시다면 [JavaScript Array Insert - How to Add to an Array with the Push, Unshift, and Concat Functions](https://www.freecodecamp.org/news/javascript-array-insert-how-to-add-to-an-array-with-the-push-unshift-and-concat-functions/) 를 읽어보세요. 
+## 주석을 생략한 코드
+```javascript
+function reverseString(str) {
+  if (str === "")
+    return "";
+  else
+    return reverseString(str.substr(1)) + str.charAt(0);
+}
+reverseString("hello");
+```
+
+
+## 조건부 삼항 연산자를 사용한 코드
+```javascript
+function reverseString(str) {
+  return (str === '') ? '' : reverseString(str.substr(1)) + str.charAt(0);
+}
+reverseString("hello");
+```
+
+<strong>JavaScript에서 문자열을 반전시키기는</strong> 기술 면접에서 물어볼 수 있는 간단한 알고리즘 문제입니다. 비교적 쉬운 방법을 사용해 문제를 풀 수 있고, 재귀를 사용하거나 또는 더 복잡한 솔루션을 사용하는 등 다양한 접근 방식을 선택할 수 있습니다. 
+
+제 글이 도움이 되셨기를 바랍니다. 이 기사는 freeCodeCamp 알고리즘 문제에 대한 "FCC 알고리즘 문제 해결하는 방법" 시리즈의 일부입니다. 이 시리즈에서는 알고리즘을 풀기 위해 몇 가지 해결책을 제안하고 프로그램이 어떻게 실행되는지를 단계별로 설명합니다.
+
+<p>
+    <a href="https://www.freecodecamp.org/news/three-ways-to-repeat-a-string-in-javascript-2a9053b93a2d/">
+    <strong>JavaScript에서 문자열을 반복하는 세 가지 방법 [영문]</strong> </br>
+    이 기사에서는 freeCodeCamp의 "문자열 반복 반복" 문제를 해결하는 방법을 설명합니다. 여기에는…
+    </a>
+</p>
+
+
+JavaScript에서 String의 끝을 확인하는 두 가지 방법
+이 기사에서는 freeCodeCamp의 "Confirm Ending" 문제를 해결하는 방법을 설명합니다.
+
+JavaScript에서 숫자를 인수분해하는 세 가지 방법
+이 기사는 Free Code Camp 기본 알고리즘 스크립팅 "숫자 인수분해"를 기반으로 합니다
+
+JavaScript에서 회문을 확인하는 두 가지 방법
+이 기사는 Free Code Camp 기본 알고리즘 스크립팅 "회문 확인"을 기반으로 합니다.
+
+JavaScript에서 문자열에서 가장 긴 단어를 찾는 세 가지 방법
+이 기사는 Free Code Camp 기본 알고리즘 스크립팅 "문자열에서 가장 긴 단어 찾기"를 기반으로 합니다.
+
+JavaScript에서 문장의 제목을 지정하는 세 가지 방법
+이 기사는 Free Code Camp 기본 알고리즘 스크립팅 "Title Case a Sentence"를 기반으로 합니다.
+
+자신의 솔루션이나 제안 사항이 있으면 아래 의견에 공유하십시오.
+
+또는 아래 녹색 하트를 클릭한 직후 Medium , Twitter , Github 및 LinkedIn 에서 저를 팔로우할 수 있습니다. ;-)
+
+#StayCurious, #KeepOnHacking & #MakeItHappen!
+
+## 참고자료: 
+- [`split()` 메서드 — MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split)
+- [`reverse()` 메서드 — MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse)
+- [`join()` 메서드 — MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join)
+- [`String.length` — MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length)
+- [`substring()` 메서드 — MDN- ](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/substring)
+- [`charAt()` 메서드 — MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/charAt)
