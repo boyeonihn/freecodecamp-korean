@@ -249,19 +249,19 @@ cars.forEach(car => {
 });
 ```
 
-### Sort an array by a property - Array.sort를 사용해 속성에 따라 배열의 객체 정렬하기 
-When we're done with transforming the objects, we usually need to sort them one way or another.
+### Array.sort를 사용해 속성별로 배열의 객체 정렬하기 
+객체 반환이 끝나면 일반적으로 객체들을 사용자 정의된 기준에 따라 정렬합니다. 
 
-Typically, the sorting is based on a value of a property every object has. We can use the `Array.sort` function, but we need to provide a function that defines the sorting mechanism.
+일반적으로 정렬은 모든 객체가 가지고 있는 속성 중 하나의 값을 기준으로 합니다. 기반으로 합니다. `Array.sort` 함수를 사용하기 위해서는 정렬 순서를 정의하는 함수를 제공해야 합니다.
 
-Let's say we want to sort the cars based on their capacity in descending order.
+자동차를 용량에 따라 내림차순으로 정렬해보겠습니다. 
 
 ![차량 용량 크기 순으로 배열 정리를 한 이미지](https://www.freecodecamp.org/news/content/images/2020/05/cars-sort.jpg)
 
 ```javascript
 let sortedCars = cars.sort((c1, c2) => (c1.capacity < c2.capacity) ? 1 : (c1.capacity > c2.capacity) ? -1 : 0);
 console.log(sortedCars);
-// output:
+// 출력된 값:
 // [
 //   {
 //     color: 'purple',
@@ -279,30 +279,31 @@ console.log(sortedCars);
 // ]
 ```
 
-The `Array.sort` compares two objects and puts the first object in the second place if the result of the sorting function is positive. So you can look at the sorting function as if it was a question: Should the first object be placed in second place?
+`Array.sort` 함수는 두 객체를 비교해 정렬 함수의 결과가 양수이면 첫 번째 객체를 두 번째 위치에 놓습니다. 정렬 기능은 해당 질문을 묻는 것과 같습니다: 첫 번째 객체는 두 번째 위치에 놓아야 하나요?
 
 ![차 객체가 정렬되는 프로세스](https://www.freecodecamp.org/news/content/images/2020/05/sort.png)
 
-Make sure to always add the case for zero when the compared value of both objects is the same to avoid unnecessary swaps.
+불필요한 정렬을 방지하기 위해 비교되는 두 객체의 값이 같을 때 `0`값이 반환되도록 설정해야 합니다. 
 
-### Checking if objects in array fulfill a condition - Array.every, Array.includes
-`Array.every` and `Array.some` come handy when we just need to check each object for a specific condition.
+### `Array.every`와 `Array.includes`를 사용해 배열의 객체가 조건을 충족하는지 확인하기 
+배열의 객체가 주어진 조건을 충족하는지 확인할 때 `Array.every` 또는 `Array.some`를 사용할 수 있습니다. 예를 들어:
 
-Do we have a red cabrio in the list of cars? Are all cars capable of transporting at least 4 people? Or more web-centric: Is there a specific product in the shopping cart?
+배열에 빨간색 카브리오가 있습니까? 모든 차 객체에 최소 4명 이상 탑승할 수 있나요? 또는 웹과 연관된 조건의 예는: 장바구니에 특정 제품이 있습니까? 
 
 ```javascript
 cars.some(car => car.color === "red" && car.type === "cabrio");
-// output: true
+// 출력된 값: true
 
 cars.every(car => car.capacity >= 4);
-// output: false
+// 출력된 값: false
 ```
 
-You may remember the function `Array.includes` which is similar to `Array.some`, but works only for primitive types.
+`Array.includes`는 `Array.some`과 비슷하지만 원시 자료형에서만 작동한다는 중요한 차이점이 있습니다. 
 
-## Summary
+## 요약 
+이 기사에서는 객체 배열의 생성, 조작, 변환 및 루프와 관련된 기본 기능들에 대해 설명했습니다. 대부분의 객체 배열 사례는 이 메서드를 통해 풀 수 있는 문제들입니다. 
 In this article, we went through the basic functions that help you create, manipulate, transform, and loop through arrays of objects. They should cover most cases you will stumble upon.
 
-If you have a use-case that requires more advanced functionality, take a look at [this detailed guide](https://www.freecodecamp.org/news/data-structures-101-arrays-a-visual-introduction-for-beginners-7f013bcc355a/) to arrays or visit the [W3 schools reference](https://www.w3schools.com/Jsref/jsref_obj_array.asp).
+더 고급 기능이 필요한 사용 사례가 있는 경우 이 [자세한 가이드 [영문]](https://www.freecodecamp.org/news/data-structures-101-arrays-a-visual-introduction-for-beginners-7f013bcc355a/) 를 살펴보거나 [W3 schools 참조 자료](https://www.w3schools.com/Jsref/jsref_obj_array.asp)를 확인해보세요. 
 
-Or [get in touch with me](https://twitter.com/ondrabus) and I will prepare another article :-)
+또는 [제게 연락해 주신다면](https://twitter.com/ondrabus) 제가 새로운 기사를 준비하겠습니다 :-)
