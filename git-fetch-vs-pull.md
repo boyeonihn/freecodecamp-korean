@@ -5,32 +5,31 @@
 
 영어 원문: [Git Fetch vs Pull: What's the Difference Between the Git Fetch and Git Pull Commands?](https://www.freecodecamp.org/news/git-fetch-vs-pull/)
 
-### Git pull and fetch are two commands that are regularly used by Git users. Let’s see the difference between both commands.
+### Git pull과 fetch는 Git 사용자가 자주 사용하는 명령어입니다. 이 기사에서는 두 명령어의 차이점을 알아보겠습니다.
 
-For the sake of context, it’s worth remembering that we’re probably working in a clone repo. What’s a clone? It's simply a duplicate of another repository. It is basically getting your own copy of someone else’s source code.
+`pull`과 `fetch` 명령은 클론 저장소(clone repo)에서 작업할 때 사용할 가능성이 높습니다. 클론 저장소는 기존 저장소를 복제한 저장소이며, 다른 사람의 소스 코드의 복사본을 생성하는 것과 같습니다.  
 
-That said, to keep your clone updated with whatever changes may have been applied to the original, you’ll need to bring those to your clone.
+기존 저장소에 적용된 변경 사항을 클론 저장소로 업데이트하려면 해당 변경 사항을 클론 저장소로 가져와야 합니다.  
 
-이때 `fetch`와 `pull` 기능이 매우 유용합니다. 
-That’s where `fetch` and `pull` come in.
+이때 `fetch`와 `pull` 명령어가 매우 유용합니다.  
 
-`git fetch` is the command that tells your local git to retrieve the latest meta-data info from the original (yet doesn’t do any file transferring. It’s more like just checking to see if there are any changes available).
+`git fetch`는 로컬 Git에 기존 원격 저장소에서 최신 메타데이터 정보를 확인하도록 지시하는 명령입니다. `fetch`는 원격 저장소에 변경사항이 있는지 확인만 하고 변경된 데이터를 로컬 Git에 가져오지 않습니다. 
 
-`git pull` on the other hand does that AND brings (copy) those changes from the remote repository.
+반면 `git pull`은 원격 저장소에서 변경된 데이터를 로컬 Git에 가져오고 복사합니다.  
 
-For example:
+다음은 `pull` 명령을 사용하는 예시 구문입니다: 
 
 ```
 git pull origin ankur bugfix
 ```
 
-The takeaway is to keep in mind that there generally are at least three copies of a project on your workstation.
+여기서 기억해야 할 것은 일반적으로 워크스테이션에 프로젝트 복사본이 세 개 이상 있다는 점입니다.
 
-- One copy is your own repository with your own commit history (the already saved one, so to say).
-- The second copy is your working copy where you are editing and building (not committed yet to your repo).
-- The third copy is your local “cached” copy of a remote repository (probably the original from where you cloned yours).
+- 첫 번째 복사본은 사용자의 커밋 기록이 있는 사용자의 저장소입니다 (다시 말해, 이미 저장이 된 저장소). 
+- 두 번째 복사본은 편집 및 작성 중이지만 사용자 저장소에 아직 커밋되지 않은 복사본입니다. 
+- 세 번째 복사본은 원격 저장소의 로컬에 "캐시된 (cached)" 복사본입니다(복제된 원본일 가능성이 높습니다). 
 
-You can use `git fetch` to know the changes done in the remote repo/branch since your last pull. This is useful to allow for checking before doing an actual pull, which could change files in your current branch and working copy (and potentially lose your changes, etc).
+`git fetch`를 사용하면 마지막 `pull` 이후 원격 저장소 또는 브랜치에 적용된 변경 사항을 확인할 수 있습니다. `pull`을 실행하면 현재 브랜치와 작업 복사본의 파일을 변경할 수 있으며 변경 내용이 손실될 수 있기 때문에 실행하기 전에 `fetch`로 확인하는 것이 유용합니다. 
 
 ```
 git fetch    
