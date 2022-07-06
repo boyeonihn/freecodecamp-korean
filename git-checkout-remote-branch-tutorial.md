@@ -57,7 +57,7 @@ But what if the remote branch already existed, and we wanted to pull the branch 
 
 That's where we "Git Checkout Remote Branch".
 
-## How to Git Checkout Remote Branch
+## cd Git Checkout Remote Branch
 Let's say there's a remote branch created by another developer, and you want to pull that branch. Here's how you go about it:
 
 ### 1. Fetch all remote branches
