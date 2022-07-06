@@ -1,4 +1,4 @@
-# Git checkout로 원격 브랜치 전환하기 
+# Git checkout 명령어를 사용해 원격 브랜치 전환하기 
 #### 인보연 (Bo Yeon Ihn) 번역
 
 ![원형으로 움직이는 별의 밤하늘 사진 ](https://cdn-media-2.freecodecamp.org/w1280/5ffda02d75d5f706921cc25f.jpg)
@@ -10,7 +10,7 @@
 
 In addition to versioning, Git allows you to work in multiple environments at the same time. Multiple environments in this context means branches.
 
-## 브랜치가 필요한 이유 Why you need branches
+## 브랜치가 필요한 이유 
 When you're working with git, you'll have a master (also called main) environment (branch). This particular branch holds the source code that gets deployed when your app is ready for production.
 
 When you want to update your app, you can also add more commits (changes) to this branch. For minor changes, this may not be a big deal, but for big changes, doing this is not ideal. And that's why other branches exist.
@@ -30,7 +30,7 @@ Another benefit of branches is that they allow multiple developers to work on th
 
 With Git, you can jump on another branch (another environment) and make changes there, while work goes on in other branches.
 
-## What does Git Checkout Remote Branch mean?
+## Git Checkout Remote Branch는 무슨 뜻인가요? 
 When you begin a project with Git, you get two environments: the local master branch (which exists in your computer), and the remote master branch (which exists in a Git-supported platform like GitHub).
 
 You can push changes from the local master branch to the remote master branch and also pull changes from the remote branch.
@@ -99,7 +99,7 @@ git push
 
 This will push the committed changes to `origin/fix-failing-tests`. If you noticed, we didn't have to specify where we were pushing the changes (like `git push origin fix-failing-tests`). That's because git automatically sets the local branch to track the remote branch.
 
-## Conclusion
+## 결론
 Git branching makes it very easy to collaborate during application development.
 
 With branches, different developers can easily work on different parts of the application simultaneously.
