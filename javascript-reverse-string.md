@@ -1,7 +1,7 @@
-# JavaScript에서 문자열을 뒤집는 세 가지 방법
+# JavaScript에서 문자열을 역순으로 뒤집는 세 가지 방법
 #### 인보연 (Bo Yeon Ihn) 번역
 
-![아치형 건축물을 아래에서 위를 바라본 채 찍은 사진](https://cdn-media-1.freecodecamp.org/images/1*aFrHLdCeSRv4z-hsfCA6hw.jpeg)
+![아치형 건축물을 아래에서 바라보며 찍은 사진](https://cdn-media-1.freecodecamp.org/images/1*aFrHLdCeSRv4z-hsfCA6hw.jpeg)
 
 영어 원문: [Three Ways to Reverse a String in JavaScript](https://www.freecodecamp.org/news/how-to-reverse-a-string-in-javascript-in-3-different-ways-75e4763c68cb/)   
 원문 글쓴이: [Sonya Moisset](https://www.freecodecamp.org/news/author/sonya/)
@@ -9,9 +9,9 @@
 
 ### 이 기사는 freeCodeCamp의 기본 알고리즘 작성법 - [문자열 반전 튜토리얼](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-algorithm-scripting/reverse-a-string)을 기반으로 합니다. 
 
-문자열 반전하기는 기술 인터뷰에서 가장 자주 묻는 JavaScript 질문 중 하나입니다. 인터뷰 진행자는 문자열을 뒤집는 여러 방법을 작성하도록 요청하거나, 내정된 메서드를 사용하지 않고 문자열을 반전하도록 요청하거나, 또는 재귀(recursion)를 사용해 문자열을 반전하도록 요청할 수 있습니다.    
+문자열 반전하기는 기술 인터뷰에서 가장 자주 묻는 JavaScript 질문 중 하나입니다. 인터뷰 진행자는 문자열을 뒤집는 여러 방법을 작성하도록 요청하거나, 내장된 메서드를 사용하지 않고 문자열을 반전하도록 요청하거나, 또는 재귀(recursion)를 사용해 문자열을 반전하도록 요청할 수 있습니다.    
 
-JavaScript에는 문자열을 반전하는 내장 메서드는 없지만, 그것을 제외해도 다른 다양한 방법이 있습니다.   
+JavaScript에는 문자열을 반전하는 내장 메서드가 없지만, 이 점을 제외하더라도 다른 다양한 방법이 있습니다.   
 
 다음은 JavaScript에서 문자열을 반전시킬 수 있는 가장 흥미로운 세 가지 방법입니다.
 
@@ -34,7 +34,7 @@ reverseString("hello");
 - reverseString("Howdy") 은 "ydwoH"를 반환해야 합니다.
 - reverseString("Greetings from Earth") 은 "htraE morf sgniterG"를 반환해야 합니다.
 
-## 1. 내장 함수를 사용해 문자열 반전하기 
+## 1. 내장 함수들을 사용해 문자열 반전하기 
 
 이 솔루션에서는 `String.protype.split()`, `Array.protype.reverse()`, 그리고 `Array.protype.join()`의 총 세가지 메서드를 사용합니다:
 
@@ -118,8 +118,6 @@ reverseString('hello');
 ## 3. 재귀로 문자열 반전하기 
 이 솔루션에서는 `String.prototype.substring()`와 `String.prototype.charAt()`의 두 가지 메서드를 사용합니다:
 
-# 감수자님을 위한 코멘트:: 2016년에 작성된 원문에서는 String.prototype.substr() 메서드였으나, [MDN](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String/substr)을 확인해 본 결과 substr() "본 부록이 포함한 기능을 사용하거나 존재함을 가정해선 안됩니다" 라고 쓰여 있어서 대신 사용되고 있는 `substring()` 메서드를 표기했습니다. 
-
 - `substring()` 메서드는 기존 문자열의 특정 시작 인덱스부터 끝 인덱스 범위 내에 위치한 문자를 부분 문자열로 반환합니다.
 
 ```javascript
@@ -132,7 +130,7 @@ reverseString('hello');
 "hello".charAt(0); // "h"
 ```
 
-재귀 깊이는 문자열의 길이와 같습니다. 이 솔루션은 문자열이 매우 길고 스택 크기가 중요한 경우 실행 속도가 매우 느리기 때문에 가장 효율적인 문자열 반전 방법은 아닙니다.
+재귀 깊이는 문자열의 길이와 같습니다. 이 솔루션은 실행 속도가 매우 느리기 때문에 문자열이 매우 길고 스택 크기가 중요한 경우 가장 효율적인 문자열 반전 방법이 아닙니다.
 
 ```javascript
 function reverseString(str) {
