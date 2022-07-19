@@ -1,4 +1,4 @@
-# freeCodeCamp: Korean translation project
+# _[freeCodeCamp](https://www.freecodecamp.org/news): Korean translation project_
 
 ## WHAT
 This repository is where I keep all my Korean translations of freeCodeCamp's articles and tutorials for the editors to access.    
