@@ -36,7 +36,7 @@ reverseString("hello");
 
 ## 1. 내장 함수들을 사용해 문자열 반전하기 
 
-이 솔루션에서는 `String.protype.split()`, `Array.protype.reverse()`, 그리고 `Array.protype.join()`의 총 세가지 메서드를 사용합니다:
+이 솔루션에서는 `String.protype.split()`, `Array.protype.reverse()`, 그리고 `Array.protype.join()`의 총 세가지 메서드를 사용합니다.
 
 - `split()` 메서드는 문자열을 부분 문자열(substring)로 구분해 문자열 객체를 여러 개의 문자열로 이루어진 배열로 분할합니다.
 - `reverse()` 메서드는 배열을 반전합니다. 첫 번째 배열 요소는 마지막 요소가 되고 마지막 요소는 첫 번째 요소가 됩니다.
@@ -116,12 +116,12 @@ reverseString('hello');
 ```
 
 ## 3. 재귀로 문자열 반전하기 
-이 솔루션에서는 `String.prototype.substring()`와 `String.prototype.charAt()`의 두 가지 메서드를 사용합니다:
+이 솔루션에서는 `String.prototype.substring()`와 `String.prototype.charAt()`의 두 가지 메서드를 사용합니다.
 
-- `substring()` 메서드는 기존 문자열의 특정 시작 인덱스부터 끝 인덱스 범위 내에 위치한 문자를 부분 문자열로 반환합니다.
+- `substring()` 메서드는 기존 문자열의 특정 시작 인덱스부터 끝 인덱스 범위 내에 위치한 문자를 부분 문자열로 반환합니다. (2016년에 작성된 영어 원문에서는 String.prototype.substr() 메서드를 소개했으나, 현재 String.substr()에 대한 [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substr) 문서에 따르면 substr() 메서드의 사용은 더 이상 권장되지 않기 때문에 번역문에는 String.prototype.substring() 메서드를 대신 설명합니다. -옮긴이) 
 
 ```javascript
-"hello".substr(1); // "ello"
+"hello".substring(1); // "ello"
 ```
 
 - `charAt()` 메서드는 문자열의 특정 인덱스에 위치하는 문자를 반환합니다.
@@ -138,7 +138,7 @@ function reverseString(str) {
     return "";
   
   else
-    return reverseString(str.substr(1)) + str.charAt(0);
+    return reverseString(str.substring(1)) + str.charAt(0);
 /* 
 재귀 메서드의 첫 번째 단계
 You need to remember that you won’t have just one call, you’ll have several nested calls
@@ -186,7 +186,7 @@ reverseString("hello");
 
 <strong>JavaScript에서 문자열을 반전시키기는</strong> 기술 면접에서 물어볼 수 있는 간단한 알고리즘 문제입니다. 비교적 쉬운 방법을 사용해 문제를 풀 수 있고, 재귀를 사용하거나 또는 더 복잡한 솔루션을 사용하는 등 다양한 접근 방식을 선택할 수 있습니다. 
 
-제 글이 도움이 되셨기를 바랍니다. 이 기사는 freeCodeCamp 알고리즘 문제에 대한 "FCC 알고리즘 문제 해결하는 방법" 시리즈의 일부입니다. 이 시리즈에서는 알고리즘을 풀기 위해 몇 가지 해결책을 제안하고 프로그램이 어떻게 실행되는지를 단계별로 설명합니다.
+제 글이 도움이 되셨기를 바랍니다. 이 기사는 freeCodeCamp 알고리즘 문제에 대한 "FCC 알고리즘 문제 해결하는 방법" 시리즈의 일부입니다. 이 영문 시리즈에서는 알고리즘을 풀기 위해 몇 가지 해결책을 제안하고 프로그램이 어떻게 실행되는지를 단계별로 설명합니다.
 
 <p>
     <a href="https://www.freecodecamp.org/news/three-ways-to-repeat-a-string-in-javascript-2a9053b93a2d/">
