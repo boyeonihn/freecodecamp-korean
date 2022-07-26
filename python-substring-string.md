@@ -3,7 +3,7 @@
 #### 인보연 번역 (Bo Yeon Ihn)
 
 ![강철 와이어 로프 사진](https://cdn-media-2.freecodecamp.org/w1280/5f9c9e45740569d1a4ca3c3e.jpg)
-영어 원문: [How to Check if a JavaScript Array is Empty or Not with .length](https://www.freecodecamp.org/news/how-to-substring-a-string-in-python/)
+영어 원문: [How to Substring a String in Python](https://www.freecodecamp.org/news/how-to-substring-a-string-in-python/)
 
 ### Python은 문자열을 부분 문자열(substring)로 만드는 여러 가지 방법을 제공하는데, 이것을 ‘슬라이싱(slicing)’이라고 부릅니다 .
 
