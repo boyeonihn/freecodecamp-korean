@@ -1,4 +1,4 @@
-# Python Modulus 나머지 연산자 - % 기호는 Python에서 무엇을 의미합니까? (해결)
+# Python Modulus 나머지 연산자 - % 기호는 Python에서 무엇을 의미할까요? (해결)
 #### 인보연 (Bo Yeon Ihn) 번역
 
 ![숲 배경에 있는 모듈로 연산자](https://www.freecodecamp.org/news/content/images/size/w2000/2020/01/python-modulo-image.jpg)
