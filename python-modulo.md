@@ -1,7 +1,7 @@
-# Python Modulus 나머지 연산자 - % 기호는 Python에서 무엇을 의미할까요? (해결)
+# Python Modulus 나머지 연산자 - % 기호는 Python에서 무엇을 의미할까요?
 #### 인보연 (Bo Yeon Ihn) 번역
 
-![숲 배경에 있는 모듈로 연산자](https://www.freecodecamp.org/news/content/images/size/w2000/2020/01/python-modulo-image.jpg)
+![숲 배경에 있는 나머지 연산자](https://www.freecodecamp.org/news/content/images/size/w2000/2020/01/python-modulo-image.jpg)
 
 영어 원문: [The Python Modulo Operator - What Does the % Symbol Mean in Python? (Solved)](https://www.freecodecamp.org/news/the-python-modulo-operator-what-does-the-symbol-mean-in-python-solved/)   
 원문 글쓴이: [Beau Carnes](https://www.freecodecamp.org/news/author/beau/)
@@ -10,11 +10,11 @@
 ### % 기호를 보면 퍼센트를 생각할 수 있습니다. 그러나 Python을 비롯한 대부분의 프로그래밍 언어에서는 다른 의미를 가집니다.
 
 
-Python에서 `%` 기호는 나머지 연산자(modulo operator)라고 합니다. 이 연산자는 왼쪽 피연산자를 오른쪽 피연산자로 나눈 후 그 나머지를 반환합니다. 나눗셈 문제의 나머지를 계산할 때 사용합니다. 
+Python에서 `%` 기호는 나머지 연산자(modulo operator)라고 합니다. (모듈로 연산자라고 불리기도 합니다 -옮긴이). 이 연산자는 왼쪽 피연산자를 오른쪽 피연산자로 나눈 후 그 나머지를 반환합니다. 나눗셈 문제의 나머지를 계산할 때 사용합니다. 
 
 나머지 연산자는 `+`, `-`, `/`, `*`, `**`, `//`와 같은 산술 연산자입니다.    
 
-다음은 나머지 연산자의 기본 구문입니다:    
+다음은 나머지 연산자의 기본 문법입니다. 
 
 ``` python
 a % b 
@@ -33,7 +33,7 @@ a % b
 
 ![7과2를 나누거나 모듈로 연산자를 사용했을 때의 결과를 표시해주는 그림](https://www.freecodecamp.org/news/content/images/2019/09/image-196.png)
 
-다음은 다른 예입니다:
+다음은 다른 예입니다.
 
 ```python
 3 % 4
@@ -47,8 +47,7 @@ a % b
 
 ## 나머지 연산자를 사용한 예시
 
-나머지 연산자의 일반적인 용도 중 하나는 짝수 또는 홀수를 찾는 것입니다. 아래 코드는 모듈로 연산자(modulo operator)를 사용하여 0에서 10 사이의 모든 홀수를 출력합니다.
-
+나머지 연산자의 일반적인 용도 중 하나는 짝수 또는 홀수를 찾는 것입니다. 아래 코드는 나머지 연산자 `%`를 사용해 0에서 10 사이의 모든 홀수를 출력합니다.
 
 ```python
 for number in range(1, 10):
